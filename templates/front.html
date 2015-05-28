@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title%}Listing{% endblock %}
+
+{% block content %}
+
+{% if not posts %}
+<p>No posts :(</p>
+{% else %}
+
+{% for p in posts %}
+<div class="post">
+    <div class="arrows">
+        <div class="upvote"><a href="/vote/{{p.id}}"><i class="icon-arrow-up"></i></a></div>
+    </div>
+
+    <div class="link">
+        <p><b>{{p.upvotes}}</b> - <a href="{{p.link}}">{{p.title}}</a></p>
+        <p>0 comments. submitted by {name} on <strong>{{p.time}}</strong></p>
+    </div>
+</div>
+{% endfor %}
+
+{% endif %}
+
+{% endblock %}

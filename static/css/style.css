@@ -1,0 +1,22 @@
+body {
+    padding-top: 60px;
+}
+
+.post {
+    margin: 0.5em;
+    margin-bottom: 1em;
+}
+
+.post > .arrows {
+    float:left;
+    height: 32px;
+}
+
+.post > .link {
+    margin-left: 18px;
+}
+
+.post > .link > p {
+    margin: 0;
+    padding: 0;
+}

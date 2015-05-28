@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+    {% block headextra %}{% endblock %}
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="/">flasknews</a>
+            <ul class="nav">
+                <li id="nav_list"><a href="/">List</a></li>
+                <li id="nav_submit"><a href="/submit">Submit</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>
+

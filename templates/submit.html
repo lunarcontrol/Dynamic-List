@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}Submit link{%endblock%}
+
+{% block content %}
+<div class="row">
+<form class="form-horizontal" method="post" action="/submit">
+    <div class="control-group">
+        <label class="control-label" for="title">Title</label>
+        <div class="controls">
+            <input type="text" name="title" class="input-xlarge" />
+            <p>Hopefully a descriptive title of your link...</p>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="link">Link</label>
+        <div class="controls">
+            <input type="text" name="link" class="input-xlarge" />
+        </div>
+    </div>
+
+    <div class="control-group">
+        <div class="controls">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</form>
+
+{% endblock %}
